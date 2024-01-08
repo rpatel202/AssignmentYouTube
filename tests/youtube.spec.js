@@ -1,4 +1,3 @@
-// tests.js
 const { test, expect } = require('@playwright/test');
 const YouTubePage = require('../pages/youtubePO');
 
@@ -13,7 +12,7 @@ test('Search for a specific video by its title', async ({ page }) => {
   expect(searchResults.length).toBeGreaterThan(0);
 });
 
-test('Search for a video by its title', async ({ page }) => {
+test('Search for a video title', async ({ page }) => {
   const youTubePage = new YouTubePage(page);
 
   await youTubePage.open();
@@ -27,6 +26,7 @@ test('Search for a video by its title', async ({ page }) => {
     * Verifying the search query result should have playwright in title.
     * Added wrong assertion on the result verification query.
     * It will pause to help us debug and findout why its failing.
+    * You can also add a screenshot function to compare visuals.
     */
 });
 
